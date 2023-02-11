@@ -16,7 +16,7 @@ async def on_message(message):
   if message.author == bot.user:
     return
   if message.content.lower() == 'hello' or message.content.lower() == 'hi':
-    message.channel.send(f'hello there {message.author.name}')
+    await message.channel.send(f'hello there {message.author.name}')
   else:
     await bot.process_commands(message)
 
